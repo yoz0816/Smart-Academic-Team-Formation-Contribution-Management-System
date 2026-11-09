@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Sign in to JOZ, your academic team formation and contribution management platform.">
+    <title>Sign In | JOZ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+
+    <main class="auth-layout">
+
+        <section class="auth-showcase">
+            <a href="../index.html" class="brand">
+                <span class="brand-symbol">J</span>
+                <span class="brand-name">JOZ</span>
+            </a>
+
+            <div class="showcase-content">
+                <span class="eyebrow">
+                    <span class="status-dot"></span>
+                    ACADEMIC COLLABORATION PLATFORM
+                </span>
+
+                <h1>Better teams.<br><span>Stronger outcomes.</span></h1>
+
+                <p class="showcase-description">
+                    Bring students together through balanced team formation,
+                    organized academic projects and transparent contribution tracking.
+                </p>
+
+                <div class="showcase-preview">
+                    <div class="preview-header">
+                        <div>
+                            <span class="preview-label">TEAM FORMATION</span>
+                            <h3>Project team overview</h3>
+                        </div>
+                        <span class="preview-status">Balanced</span>
+                    </div>
+
+                    <div class="preview-members">
+                        <div class="member-avatar avatar-one">JD</div>
+                        <div class="member-avatar avatar-two">MK</div>
+                        <div class="member-avatar avatar-three">AB</div>
+                        <div class="member-info">
+                            <strong>Team Alpha</strong>
+                            <span>3 students · 1 project</span>
+                        </div>
+                    </div>
+
+                    <div class="preview-divider"></div>
+
+                    <div class="preview-metric">
+                        <span>Technical skills</span>
+                        <strong>90%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width:90%"></div>
+                    </div>
+
+                    <div class="preview-metric">
+                        <span>Academic experience</span>
+                        <strong>85%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill teal-fill" style="width:85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-footer">
+                <span>JOZ — Student Team Formation & Contribution Management</span>
+                <span>Built for academic excellence.</span>
+            </div>
+        </section>
+
+        <section class="auth-panel">
+            <div class="auth-form-wrapper">
+
+                <div class="mobile-brand">
+                    <span class="brand-symbol">J</span>
+                    <span class="brand-name">JOZ</span>
+                </div>
+
+                <div class="form-heading">
+                    <span class="form-overline">WELCOME BACK</span>
+                    <h2>Sign in to JOZ</h2>
+                    <p>Enter your account details to continue to your workspace.</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-field">
+                        <label for="email">University email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@university.edu"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-row">
+                            <label for="password">Password</label>
+                        </div>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-option">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        Sign in to your account
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p class="form-message" id="loginMessage" aria-live="polite"></p>
+                </form>
+
+                <div class="auth-switch">
+                    Don't have an account?
+                    <a href="register.html">Create a student account</a>
+                </div>
+
+                <div class="auth-security">
+                    <span class="security-icon">◆</span>
+                    Secure access to your academic workspace
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
