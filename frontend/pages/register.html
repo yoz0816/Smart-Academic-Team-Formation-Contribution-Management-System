@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Create your JOZ student account.">
+    <title>Create Account | JOZ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+
+    <main class="auth-layout">
+
+        <section class="auth-showcase">
+            <a href="../index.html" class="brand">
+                <span class="brand-symbol">J</span>
+                <span class="brand-name">JOZ</span>
+            </a>
+
+            <div class="showcase-content">
+                <span class="eyebrow">
+                    <span class="status-dot"></span>
+                    START YOUR ACADEMIC JOURNEY
+                </span>
+
+                <h1>Your next project<br>starts with <span>the right team.</span></h1>
+
+                <p class="showcase-description">
+                    Create your student account, share your academic strengths
+                    and discover better ways to collaborate on university projects.
+                </p>
+
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">01</span>
+                        <div>
+                            <strong>Build your academic profile</strong>
+                            <p>Showcase your skills, interests and experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">02</span>
+                        <div>
+                            <strong>Find balanced project teams</strong>
+                            <p>Get matched with students based on your profile.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">03</span>
+                        <div>
+                            <strong>Track your contributions</strong>
+                            <p>Keep your academic teamwork organized.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-footer">
+                <span>JOZ — Student Team Formation & Contribution Management</span>
+                <span>Built for academic excellence.</span>
+            </div>
+        </section>
+
+        <section class="auth-panel">
+            <div class="auth-form-wrapper register-wrapper">
+
+                <div class="mobile-brand">
+                    <span class="brand-symbol">J</span>
+                    <span class="brand-name">JOZ</span>
+                </div>
+
+                <div class="form-heading">
+                    <span class="form-overline">GET STARTED</span>
+                    <h2>Create your account</h2>
+                    <p>Register as a student to join the JOZ academic community.</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+
+                    <div class="form-field">
+                        <label for="fullName">Full name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="full_name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="studentNumber">Student number</label>
+                        <input
+                            type="text"
+                            id="studentNumber"
+                            name="student_number"
+                            placeholder="Enter your university student number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">University email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@university.edu"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                        <span class="field-hint">Use at least 8 characters.</span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="confirmPassword">Confirm password</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirm_password"
+                            placeholder="Enter your password again"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        Create student account
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p class="form-message" id="registerMessage" aria-live="polite"></p>
+                </form>
+
+                <div class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </div>
+
+                <div class="auth-security">
+                    <span class="security-icon">◆</span>
+                    Your account information is securely managed
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
