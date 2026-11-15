@@ -1,4 +1,7 @@
+
+# ==============================
 # Python
+# ==============================
 __pycache__/
 *.py[cod]
 *.pyo
@@ -8,34 +11,50 @@ __pycache__/
 dist/
 build/
 
+# ==============================
 # Virtual environments
+# ==============================
 .venv/
 venv/
 env/
+backend/.venv/
 
+# ==============================
 # Environment variables and secrets
+# ==============================
 .env
 .env.*
 !.env.example
+backend/.env
 
-# Testing and tools
+# ==============================
+# Testing and code quality
+# ==============================
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
 
+# ==============================
 # Logs
+# ==============================
 *.log
 
+# ==============================
 # Uploaded runtime files
+# ==============================
 backend/uploads/
 
+# ==============================
 # Database files
+# ==============================
 *.sqlite3
 *.db
 
-# Editor and operating system
+# ==============================
+# Editors and operating systems
+# ==============================
 .vscode/
 .idea/
 .DS_Store
