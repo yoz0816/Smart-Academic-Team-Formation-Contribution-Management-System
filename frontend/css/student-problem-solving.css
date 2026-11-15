@@ -1,0 +1,440 @@
+.problem-solving-content {
+    max-width: 1200px;
+}
+
+.problem-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.problem-heading h1 {
+    margin: 8px 0 10px;
+}
+
+.problem-heading p,
+.problem-overview-text p,
+.problem-section-heading p {
+    color: var(--text-muted, #929bb0);
+    line-height: 1.7;
+}
+
+.problem-heading p {
+    max-width: 680px;
+    margin: 0;
+}
+
+.problem-heading-icon {
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(128, 101, 246, 0.3);
+    border-radius: 22px;
+    background: rgba(128, 101, 246, 0.12);
+    color: #a895ff;
+    font-size: 36px;
+}
+
+.problem-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 26px 28px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(128, 101, 246, 0.2);
+    border-radius: 16px;
+    background: linear-gradient(
+        120deg,
+        rgba(128, 101, 246, 0.13),
+        rgba(53, 214, 189, 0.045)
+    );
+}
+
+.problem-overview-text h2 {
+    margin: 8px 0;
+    color: var(--text-primary, #f4f5fb);
+    font-size: 21px;
+}
+
+.problem-overview-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.problem-counter {
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 13px 18px;
+    border: 1px solid rgba(128, 101, 246, 0.28);
+    border-radius: 13px;
+    background: rgba(11, 16, 32, 0.5);
+}
+
+.problem-counter strong {
+    color: #a895ff;
+    font-size: 25px;
+}
+
+.problem-counter span {
+    color: var(--text-muted, #929bb0);
+    font-size: 12px;
+}
+
+.problem-instructions,
+.problem-information {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 19px 21px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(53, 214, 189, 0.16);
+    border-radius: 12px;
+    background: rgba(53, 214, 189, 0.045);
+}
+
+.problem-instructions-icon,
+.problem-information-icon {
+    flex-shrink: 0;
+    color: #55dfc7;
+    font-size: 20px;
+}
+
+.problem-instructions h3,
+.problem-information h3 {
+    margin: 0 0 7px;
+    color: var(--text-primary, #f4f5fb);
+    font-size: 14px;
+}
+
+.problem-instructions p,
+.problem-information p {
+    margin: 0;
+    color: var(--text-muted, #929bb0);
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.problem-assessments-section {
+    margin-bottom: 25px;
+}
+
+.problem-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.problem-section-heading h2 {
+    margin: 0 0 7px;
+    color: var(--text-primary, #f4f5fb);
+    font-size: 19px;
+}
+
+.problem-section-heading p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.problem-total-label {
+    flex-shrink: 0;
+    padding: 7px 11px;
+    border: 1px solid rgba(128, 101, 246, 0.25);
+    border-radius: 20px;
+    background: rgba(128, 101, 246, 0.1);
+    color: #b4a5ff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.problem-assessments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.problem-assessment-card {
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid var(--border-color, rgba(148, 163, 184, 0.16));
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.018);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.problem-assessment-card:hover {
+    border-color: rgba(128, 101, 246, 0.38);
+    background: rgba(128, 101, 246, 0.035);
+}
+
+.problem-assessment-card.is-assessed {
+    border-color: rgba(53, 214, 189, 0.2);
+}
+
+.problem-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.problem-card-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.problem-card-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(128, 101, 246, 0.2);
+    border-radius: 12px;
+    background: rgba(128, 101, 246, 0.12);
+    color: #b4a5ff;
+    font-size: 19px;
+}
+
+.problem-card-title {
+    margin: 0;
+    color: var(--text-primary, #f4f5fb);
+    font-size: 15px;
+    font-weight: 650;
+    line-height: 1.45;
+}
+
+.problem-card-number {
+    flex-shrink: 0;
+    color: #778198;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.problem-card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 14px;
+    color: var(--text-muted, #929bb0);
+    font-size: 11px;
+}
+
+.problem-card-status::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #778198;
+    content: "";
+}
+
+.problem-assessment-card.is-assessed .problem-card-status {
+    color: #55dfc7;
+}
+
+.problem-assessment-card.is-assessed .problem-card-status::before {
+    background: #35d6bd;
+}
+
+.problem-field-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted, #929bb0);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.problem-proficiency-select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color, rgba(148, 163, 184, 0.2));
+    border-radius: 9px;
+    outline: none;
+    background: rgba(7, 12, 25, 0.55);
+    color: var(--text-primary, #f4f5fb);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.problem-proficiency-select:focus {
+    border-color: #8065f6;
+    box-shadow: 0 0 0 3px rgba(128, 101, 246, 0.12);
+}
+
+.problem-proficiency-select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.problem-proficiency-select option {
+    background: #10182b;
+    color: #f4f5fb;
+}
+
+.problem-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.problem-save-button,
+.problem-remove-button {
+    min-height: 38px;
+    padding: 9px 13px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.problem-save-button {
+    flex: 1;
+    background: #8065f6;
+    color: #fff;
+}
+
+.problem-save-button:hover:not(:disabled) {
+    background: #7054e8;
+}
+
+.problem-save-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.problem-remove-button {
+    border-color: rgba(248, 113, 113, 0.2);
+    background: rgba(248, 113, 113, 0.08);
+    color: #f58b8b;
+}
+
+.problem-remove-button:hover:not(:disabled) {
+    background: rgba(248, 113, 113, 0.16);
+}
+
+.problem-remove-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.problem-page-status {
+    min-height: 22px;
+    margin: 0 0 14px;
+    color: var(--text-muted, #929bb0);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.problem-page-status.success {
+    color: #55dfc7;
+}
+
+.problem-page-status.error {
+    color: #f58b8b;
+}
+
+.problem-empty-state {
+    grid-column: 1 / -1;
+    padding: 25px 16px;
+    border: 1px dashed rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    color: var(--text-muted, #929bb0);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.problem-information {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 800px) {
+    .problem-assessments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .problem-heading {
+        align-items: flex-start;
+    }
+
+    .problem-heading-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 15px;
+        font-size: 27px;
+    }
+
+    .problem-overview {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .problem-counter {
+        min-width: 78px;
+        padding: 10px;
+    }
+
+    .problem-assessment-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .problem-heading-icon {
+        display: none;
+    }
+
+    .problem-overview {
+        flex-direction: column;
+    }
+
+    .problem-counter {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .problem-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .problem-card-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .problem-save-button,
+    .problem-remove-button {
+        width: 100%;
+    }
+
+    .problem-instructions,
+    .problem-information {
+        padding: 16px;
+    }
+}

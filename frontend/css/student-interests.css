@@ -1,0 +1,388 @@
+.student-interests-content {
+    max-width: 1440px;
+}
+
+.interests-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.interests-heading h1 {
+    margin: 8px 0 10px;
+    color: var(--text);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-weight: 750;
+}
+
+.interests-heading p {
+    max-width: 700px;
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.page-eyebrow {
+    color: var(--secondary);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+.interests-heading-icon {
+    display: grid;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    place-items: center;
+    border: 1px solid rgba(128, 101, 246, 0.3);
+    border-radius: 22px;
+    background: linear-gradient(
+        135deg,
+        rgba(128, 101, 246, 0.2),
+        rgba(53, 214, 189, 0.1)
+    );
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+.interests-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding: 26px 30px;
+    overflow: hidden;
+    border: 1px solid rgba(128, 101, 246, 0.25);
+    border-radius: 18px;
+    background: linear-gradient(
+        115deg,
+        rgba(128, 101, 246, 0.16),
+        rgba(53, 214, 189, 0.07)
+    );
+}
+
+.interests-overview-text h2 {
+    margin: 7px 0;
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+.interests-overview-text p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.overview-label {
+    color: var(--secondary);
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 1.3px;
+}
+
+.interests-counter {
+    display: flex;
+    min-width: 105px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 18px;
+    border: 1px solid rgba(53, 214, 189, 0.25);
+    border-radius: 14px;
+    background: rgba(11, 16, 32, 0.45);
+}
+
+.interests-counter strong {
+    color: var(--secondary);
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.interests-counter span {
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+}
+
+.interests-panel {
+    padding: 26px;
+}
+
+.interests-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.interests-panel-header h2 {
+    margin: 0 0 6px;
+    color: var(--text);
+    font-size: 1.15rem;
+}
+
+.interests-panel-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+}
+
+.interests-clear-button {
+    padding: 9px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    transition: 0.2s ease;
+}
+
+.interests-clear-button:hover {
+    border-color: rgba(255, 100, 120, 0.4);
+    color: #ff8295;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.interest-card {
+    position: relative;
+    display: flex;
+    min-height: 82px;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.025);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(128, 101, 246, 0.45);
+    background: rgba(128, 101, 246, 0.06);
+}
+
+.interest-card.selected {
+    border-color: rgba(53, 214, 189, 0.55);
+    background: rgba(53, 214, 189, 0.075);
+}
+
+.interest-card input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.interest-card:focus-within {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}
+
+.interest-card-icon {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(128, 101, 246, 0.13);
+    color: #a995ff;
+    font-size: 1.15rem;
+}
+
+.interest-card.selected .interest-card-icon {
+    background: rgba(53, 214, 189, 0.13);
+    color: var(--secondary);
+}
+
+.interest-card-name {
+    flex: 1;
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.interest-card-check {
+    display: grid;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: transparent;
+    font-size: 0.75rem;
+    transition: 0.2s ease;
+}
+
+.interest-card.selected .interest-card-check {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: #07151b;
+}
+
+.interests-loading,
+.interests-empty {
+    grid-column: 1 / -1;
+    padding: 35px 15px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.interests-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.interests-status {
+    min-height: 20px;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+}
+
+.interests-status.success {
+    color: var(--secondary);
+}
+
+.interests-status.error {
+    color: #ff8295;
+}
+
+.interests-save-button {
+    display: inline-flex;
+    min-width: 155px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(110deg, var(--primary), #6950d7);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 650;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.interests-save-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.interests-save-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.interests-note {
+    margin: 18px 2px 0;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+.dashboard-footer {
+    margin-top: 32px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+}
+
+@media (max-width: 1050px) {
+    .interests-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .interests-heading-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 17px;
+    }
+
+    .interests-overview {
+        padding: 21px;
+    }
+
+    .interests-panel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .interests-heading {
+        align-items: flex-start;
+    }
+
+    .interests-heading-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.4rem;
+    }
+
+    .interests-overview {
+        align-items: flex-start;
+    }
+
+    .interests-counter {
+        min-width: 78px;
+        padding: 10px;
+    }
+
+    .interests-counter strong {
+        font-size: 1.6rem;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interests-panel-header {
+        align-items: flex-start;
+    }
+
+    .interests-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .interests-save-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .interests-heading-icon {
+        display: none;
+    }
+
+    .interests-overview {
+        flex-direction: column;
+    }
+}

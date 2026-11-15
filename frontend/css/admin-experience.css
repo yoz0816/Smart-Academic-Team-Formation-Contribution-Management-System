@@ -1,0 +1,284 @@
+.admin-experience-content {
+    max-width: 1500px;
+}
+
+.admin-experience-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.admin-experience-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 20px;
+    background: rgba(128,101,246,.07);
+    border: 1px solid rgba(128,101,246,.16);
+    border-radius: 14px;
+}
+
+.admin-experience-stat span {
+    color: var(--text-muted, #a3aec2);
+    font-size: 12px;
+}
+
+.admin-experience-stat strong {
+    color: var(--text, #f4f6fc);
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.admin-experience-stat.pending {
+    background: rgba(244,201,107,.055);
+    border-color: rgba(244,201,107,.17);
+}
+
+.admin-experience-stat.approved {
+    background: rgba(53,214,189,.055);
+    border-color: rgba(53,214,189,.17);
+}
+
+.admin-experience-stat.rejected {
+    background: rgba(255,133,133,.055);
+    border-color: rgba(255,133,133,.17);
+}
+
+.admin-experience-panel {
+    min-width: 0;
+    padding: 24px;
+}
+
+.admin-experience-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border, rgba(148,163,184,.14));
+}
+
+.admin-experience-toolbar h3 {
+    margin: 0 0 6px;
+    color: var(--text, #f4f6fc);
+    font-size: 16px;
+}
+
+.admin-experience-toolbar p {
+    margin: 0;
+    color: var(--text-muted, #a3aec2);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.admin-experience-toolbar select {
+    min-height: 42px;
+    padding: 0 35px 0 12px;
+    color: var(--text, #f4f6fc);
+    background: var(--bg-secondary, #0e1629);
+    border: 1px solid var(--border, rgba(148,163,184,.2));
+    border-radius: 9px;
+    font: inherit;
+    font-size: 12px;
+    color-scheme: dark;
+}
+
+.admin-experience-message {
+    min-height: 18px;
+    margin: 13px 0;
+    color: var(--text-muted, #a3aec2);
+    font-size: 12px;
+}
+
+.admin-experience-message.is-success {
+    color: var(--secondary, #35d6bd);
+}
+
+.admin-experience-message.is-error {
+    color: #ff8585;
+}
+
+.admin-experience-list {
+    display: grid;
+    gap: 13px;
+}
+
+.admin-experience-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    background: rgba(11,16,32,.35);
+    border: 1px solid var(--border, rgba(148,163,184,.14));
+    border-radius: 12px;
+}
+
+.admin-experience-student {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    min-width: 0;
+}
+
+.admin-experience-avatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    color: #b7a8ff;
+    background: rgba(128,101,246,.14);
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.admin-experience-student h4 {
+    margin: 0 0 5px;
+    color: var(--text, #f4f6fc);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.admin-experience-student p {
+    margin: 0 0 5px;
+    color: var(--text-muted, #a3aec2);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.admin-experience-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 9px;
+    color: var(--text-subtle, #738099);
+    font-size: 11px;
+}
+
+.admin-experience-cgpa {
+    margin-top: 8px;
+    color: var(--secondary, #35d6bd);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.admin-experience-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.admin-review-button {
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-review-button:disabled {
+    opacity: .55;
+    cursor: wait;
+}
+
+.admin-review-button.approve {
+    color: #35d6bd;
+    background: rgba(53,214,189,.09);
+    border: 1px solid rgba(53,214,189,.2);
+}
+
+.admin-review-button.reject {
+    color: #ff9292;
+    background: rgba(255,133,133,.08);
+    border: 1px solid rgba(255,133,133,.2);
+}
+
+.admin-experience-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.admin-experience-status.pending {
+    color: #f4c96b;
+    background: rgba(244,201,107,.1);
+}
+
+.admin-experience-status.approved {
+    color: #35d6bd;
+    background: rgba(53,214,189,.1);
+}
+
+.admin-experience-status.rejected {
+    color: #ff8585;
+    background: rgba(255,133,133,.1);
+}
+
+.admin-experience-reason {
+    grid-column: 1 / -1;
+    padding: 11px 13px;
+    color: #ffaaaa;
+    background: rgba(255,133,133,.06);
+    border: 1px solid rgba(255,133,133,.15);
+    border-radius: 9px;
+    font-size: 11px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.admin-experience-loading,
+.admin-experience-empty {
+    padding: 32px 15px;
+    text-align: center;
+    color: var(--text-muted, #a3aec2);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.admin-experience-empty i {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary-light, #a18cff);
+    font-size: 26px;
+}
+
+@media (max-width: 1000px) {
+    .admin-experience-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-experience-card {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-experience-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-experience-panel {
+        padding: 16px;
+    }
+
+    .admin-experience-summary {
+        gap: 10px;
+    }
+
+    .admin-experience-stat {
+        padding: 15px;
+    }
+}
