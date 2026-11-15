@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review and verify student CGPA submissions in JOZ.">
+    <title>CGPA Verification | JOZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/admin-experience.css">
+</head>
+<body class="dashboard-page">
+<div class="dashboard-layout">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-brand">
+            <a href="../../index.html" class="brand-logo">
+                <span class="brand-mark">J</span>
+                <span class="brand-name">JOZ<span>.</span></span>
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Overview</p>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="fa-solid fa-house"></i><span>Dashboard</span>
+                </a>
+                <a href="academic-experience.html" class="sidebar-link active">
+                    <i class="fa-solid fa-graduation-cap"></i><span>CGPA Verification</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">User Management</p>
+            <nav class="sidebar-nav">
+                <a href="accounts.html" class="sidebar-link"><i class="fa-solid fa-users"></i><span>Account Management</span></a>
+                <a href="lecturers.html" class="sidebar-link"><i class="fa-solid fa-chalkboard-user"></i><span>Lecturer Management</span></a>
+                <a href="students.html" class="sidebar-link"><i class="fa-solid fa-user-graduate"></i><span>Student Management</span></a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Academic Management</p>
+            <nav class="sidebar-nav">
+                <a href="courses.html" class="sidebar-link"><i class="fa-solid fa-book"></i><span>Course Management</span></a>
+                <a href="eligibility.html" class="sidebar-link"><i class="fa-solid fa-user-check"></i><span>Student Eligibility</span></a>
+                <a href="assignments.html" class="sidebar-link"><i class="fa-solid fa-calendar-check"></i><span>Academic Assignments</span></a>
+                <a href="proposals.html" class="sidebar-link"><i class="fa-solid fa-file-circle-check"></i><span>Project Proposals</span></a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Team Formation</p>
+            <nav class="sidebar-nav">
+                <a href="team-formation.html" class="sidebar-link"><i class="fa-solid fa-gears"></i><span>Formation Management</span></a>
+                <a href="teams.html" class="sidebar-link"><i class="fa-solid fa-people-group"></i><span>Team Management</span></a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">System Insights</p>
+            <nav class="sidebar-nav">
+                <a href="reports.html" class="sidebar-link"><i class="fa-solid fa-chart-column"></i><span>Reports & Analytics</span></a>
+            </nav>
+        </div>
+
+        <div class="sidebar-footer">
+            <button type="button" class="sidebar-link" id="logoutButton">
+                <i class="fa-solid fa-right-from-bracket"></i><span>Sign Out</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <div class="topbar-left">
+                <button type="button" class="sidebar-toggle" id="sidebarToggle"
+                        aria-label="Toggle navigation" aria-controls="dashboardSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="topbar-heading">
+                    <h1>CGPA Verification</h1>
+                    <p>Review student cumulative GPA submissions.</p>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <div class="topbar-divider"></div>
+                <a href="profile.html" class="topbar-user">
+                    <div class="user-avatar" id="userAvatar">A</div>
+                    <div class="user-details">
+                        <span class="user-name" id="userName">Administrator</span>
+                        <span class="user-role">Administrator Account</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="dashboard-content admin-experience-content">
+            <div class="page-heading">
+                <div>
+                    <p class="page-eyebrow">ACADEMIC MANAGEMENT</p>
+                    <h2>Student CGPA Records</h2>
+                    <p>Compare submitted CGPAs with official university academic records before making a decision.</p>
+                </div>
+            </div>
+
+            <section class="admin-experience-summary">
+                <article class="admin-experience-stat">
+                    <span>All submissions</span>
+                    <strong id="totalRecords">0</strong>
+                </article>
+                <article class="admin-experience-stat pending">
+                    <span>Pending review</span>
+                    <strong id="pendingRecords">0</strong>
+                </article>
+                <article class="admin-experience-stat approved">
+                    <span>Approved</span>
+                    <strong id="approvedRecords">0</strong>
+                </article>
+                <article class="admin-experience-stat rejected">
+                    <span>Rejected</span>
+                    <strong id="rejectedRecords">0</strong>
+                </article>
+            </section>
+
+            <section class="dashboard-panel admin-experience-panel">
+                <div class="admin-experience-toolbar">
+                    <div>
+                        <h3>CGPA submissions</h3>
+                        <p>Only approved CGPAs are eligible for team formation scoring.</p>
+                    </div>
+                    <select id="statusFilter" aria-label="Filter submissions by status">
+                        <option value="">All submissions</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <p id="adminExperienceMessage" class="admin-experience-message"
+                    role="status" aria-live="polite"></p>
+
+                <div id="adminExperienceList" class="admin-experience-list" aria-live="polite">
+                    <div class="admin-experience-loading">
+                        <i class="fa-solid fa-spinner fa-spin"></i> Loading submissions...
+                    </div>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>&copy; <span id="currentYear"></span> JOZ. Smart Academic Team Formation & Contribution Management System.</p>
+            </footer>
+        </section>
+    </main>
+</div>
+
+<script src="../../js/api.js"></script>
+<script src="../../js/session.js"></script>
+<script src="../../js/dashboard.js" defer></script>
+<script src="../../js/admin-experience.js" defer></script>
+</body>
+</html>
