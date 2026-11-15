@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JOZ Student Dashboard - Manage your academic profile, skills, team and contributions.">
+    <title>Student Dashboard | JOZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+            <div class="sidebar-brand">
+                <a href="../../index.html" class="brand-logo">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-name">JOZ<span>.</span></span>
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">Overview</p>
+
+                <nav class="sidebar-nav" aria-label="Main navigation">
+                    <a href="dashboard.html" class="sidebar-link active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">Academic Profile</p>
+
+                <nav class="sidebar-nav" aria-label="Academic profile navigation">
+                    <a href="academic-profile.html" class="sidebar-link">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Academic Information</span>
+                    </a>
+
+                    <a href="skills.html" class="sidebar-link">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Technical Skills</span>
+                    </a>
+
+                    <a href="experience.html" class="sidebar-link">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Academic Experience</span>
+                    </a>
+
+                    <a href="interests.html" class="sidebar-link">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Interests</span>
+                    </a>
+
+                    <a href="preferences.html" class="sidebar-link">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Team Preferences</span>
+                    </a>
+
+                    <a href="soft-skills.html" class="sidebar-link">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>Soft Skills</span>
+                    </a>
+
+                    <a href="problem-solving.html" class="sidebar-link">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Problem-Solving</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">Team Workspace</p>
+
+                <nav class="sidebar-nav" aria-label="Team workspace navigation">
+                    <a href="my-team.html" class="sidebar-link">
+                        <i class="fa-solid fa-people-roof"></i>
+                        <span>My Team</span>
+                    </a>
+
+                    <a href="tasks.html" class="sidebar-link">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Tasks & Contributions</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">Communication</p>
+
+                <nav class="sidebar-nav" aria-label="Communication navigation">
+                    <a href="notifications.html" class="sidebar-link">
+                        <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <button type="button" class="sidebar-link" id="logoutButton">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sign Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar">
+
+                <div class="topbar-left">
+                    <button
+                        type="button"
+                        class="sidebar-toggle"
+                        id="sidebarToggle"
+                        aria-label="Toggle navigation"
+                        aria-controls="dashboardSidebar"
+                        aria-expanded="false"
+                    >
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="topbar-heading">
+                        <h1>Dashboard</h1>
+                        <p>Welcome to your academic workspace.</p>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <a href="notifications.html" class="notification-button" aria-label="View notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-indicator"></span>
+                    </a>
+
+                    <div class="topbar-divider"></div>
+
+                    <a href="profile.html" class="topbar-user">
+                        <div class="user-avatar" id="userAvatar">S</div>
+
+                        <div class="user-details">
+                            <span class="user-name" id="userName">Student</span>
+                            <span class="user-role">Student Account</span>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+            </header>
+
+            <section class="dashboard-content">
+                <div class="page-heading">
+                    <div>
+                        <p class="page-eyebrow">STUDENT WORKSPACE</p>
+                        <h2>Overview</h2>
+                        <p>
+                            Manage your academic information and stay updated
+                            with your team activities.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="dashboard-summary" aria-label="Academic summary">
+
+                    <article class="summary-card">
+                        <div class="summary-card-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <div class="summary-card-info">
+                            <p>Profile Completion</p>
+                            <h3 id="profileCompletion">--</h3>
+                        </div>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-card-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="summary-card-info">
+                            <p>Team Status</p>
+                            <h3 id="teamStatus">Pending</h3>
+                        </div>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-card-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <div class="summary-card-info">
+                            <p>Assigned Tasks</p>
+                            <h3 id="assignedTasks">--</h3>
+                        </div>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-card-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="summary-card-info">
+                            <p>Notifications</p>
+                            <h3 id="notificationCount">--</h3>
+                        </div>
+                    </article>
+
+                </section>
+
+                <div class="dashboard-grid">
+
+                    <section class="dashboard-panel profile-overview">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Academic Profile</h3>
+                                <p>Your student information and readiness.</p>
+                            </div>
+
+                            <a href="profile.html" class="panel-link">
+                                View Profile
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="profile-overview-content">
+                            <div class="profile-avatar" id="profileAvatar">S</div>
+
+                            <div class="profile-information">
+                                <h4 id="profileName">Student Name</h4>
+                                <p id="profileEmail">student@example.com</p>
+                                <span class="profile-status">Student Account</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-progress">
+                            <div class="progress-heading">
+                                <span>Profile completion</span>
+                                <span id="profileProgressLabel">--</span>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" id="profileProgressBar"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-panel team-overview">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>My Team</h3>
+                                <p>Your academic project team.</p>
+                            </div>
+
+                            <a href="my-team.html" class="panel-link">
+                                View Team
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="empty-state">
+                            <div class="empty-state-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <h4>No Team Assigned Yet</h4>
+
+                            <p>
+                                Your team information will appear here
+                                once the team formation process is completed.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-panel tasks-overview">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recent Tasks</h3>
+                                <p>Keep track of your team responsibilities.</p>
+                            </div>
+
+                            <a href="tasks.html" class="panel-link">
+                                View Tasks
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="empty-state">
+                            <div class="empty-state-icon">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                            </div>
+
+                            <h4>No Tasks Available</h4>
+
+                            <p>
+                                Your assigned tasks will appear here
+                                when your team begins its project.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-panel notifications-overview">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recent Notifications</h3>
+                                <p>Important updates from JOZ.</p>
+                            </div>
+
+                            <a href="notifications.html" class="panel-link">
+                                View All
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="empty-state">
+                            <div class="empty-state-icon">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+
+                            <h4>You're All Caught Up</h4>
+
+                            <p>
+                                New announcements and updates will appear here.
+                            </p>
+                        </div>
+                    </section>
+
+                </div>
+
+                <footer class="dashboard-footer">
+                    <p>
+                        &copy; <span id="currentYear"></span> JOZ.
+                        Smart Academic Team Formation & Contribution Management System.
+                    </p>
+                </footer>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/session.js"></script>
+    <script src="../../js/dashboard.js" defer></script>
+
+    <script>
+        "use strict";
+
+        (async function initializeStudentDashboard() {
+            const user = await window.JOZSession.requireRole(["student"]);
+
+            if (!user) return;
+
+            const fullName = user.full_name || "Student";
+            const initial = fullName.charAt(0).toUpperCase();
+
+            document.getElementById("userName").textContent = fullName;
+            document.getElementById("profileName").textContent = fullName;
+            document.getElementById("profileEmail").textContent = user.email;
+            document.getElementById("userAvatar").textContent = initial;
+            document.getElementById("profileAvatar").textContent = initial;
+
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+
+            document.getElementById("logoutButton").addEventListener(
+                "click",
+                async () => {
+                    try {
+                        await window.JOZSession.logout();
+                    } catch (error) {
+                        alert(error.message || "Unable to sign out.");
+                    }
+                }
+            );
+        })();
+    </script>
+
+</body>
+</html>
