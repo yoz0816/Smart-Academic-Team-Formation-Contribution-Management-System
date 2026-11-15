@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your JOZ student account.">
+    <title>Create Account | JOZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="auth-page">
+
+    <main class="auth-layout">
+
+        <section class="auth-visual">
+            <a href="../../index.html" class="brand auth-brand">
+                <span class="brand-mark">J</span>
+                <span>JOZ</span>
+            </a>
+
+            <div class="auth-visual-content">
+                <span class="auth-eyebrow">YOUR ACADEMIC JOURNEY STARTS HERE</span>
+
+                <h1>Find your strengths. <span>Build together.</span></h1>
+
+                <p>
+                    Create your student account, showcase your abilities,
+                    connect with compatible teammates, and contribute
+                    to meaningful academic projects.
+                </p>
+
+                <div class="auth-visual-stats">
+                    <div>
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span>Build your academic profile</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>Connect with suitable teammates</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-bullseye"></i>
+                        <span>Make your contributions count</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-visual-footer">
+                <span>JOZ</span>
+                <span>Build better teams. Achieve more together.</span>
+            </div>
+        </section>
+
+        <section class="auth-form-section register-section">
+
+            <div class="auth-form-container register-container">
+
+                <a href="../../index.html" class="auth-mobile-brand brand">
+                    <span class="brand-mark">J</span>
+                    <span>JOZ</span>
+                </a>
+
+                <div class="auth-heading">
+                    <span class="auth-label">JOIN THE COMMUNITY</span>
+                    <h2>Create your account</h2>
+                    <p>Start your academic collaboration journey with JOZ.</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+
+                    <div class="form-group">
+                        <label for="fullName">Full name</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="full_name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="100"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="field-hint">Choose a strong password for your account.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm password</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirm_password"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="account-role-note">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span>Student account registration</span>
+                    </div>
+
+                    <div id="registerMessage" class="auth-message" role="alert" hidden></div>
+
+                    <button type="submit" class="auth-submit-btn">
+                        Create Account
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="auth-divider">
+                    <span>Already a member?</span>
+                </div>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </p>
+
+                <p class="auth-security-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Your account information is protected.
+                </p>
+
+            </div>
+
+            <footer class="auth-page-footer">
+                <span>© <span id="currentYear"></span> JOZ</span>
+                <a href="../../index.html">Back to home</a>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/api.js" defer></script>
+    <script src="../../js/session.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+</body>
+</html>

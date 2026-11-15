@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your JOZ account.">
+    <title>Sign In | JOZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="auth-page">
+
+    <main class="auth-layout">
+
+        <section class="auth-visual">
+            <a href="../../index.html" class="brand auth-brand">
+                <span class="brand-mark">J</span>
+                <span>JOZ</span>
+            </a>
+
+            <div class="auth-visual-content">
+                <span class="auth-eyebrow">SMART ACADEMIC TEAM FORMATION</span>
+
+                <h1>Great projects begin with <span>great teams.</span></h1>
+
+                <p>
+                    Bring students, skills, and ideas together.
+                    JOZ helps build balanced academic teams and
+                    makes project collaboration easier to manage.
+                </p>
+
+                <div class="auth-visual-stats">
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <span>Balanced teams</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Measurable progress</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Better collaboration</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-visual-footer">
+                <span>JOZ</span>
+                <span>Build better teams. Achieve more together.</span>
+            </div>
+        </section>
+
+        <section class="auth-form-section">
+
+            <div class="auth-form-container">
+
+                <a href="../../index.html" class="auth-mobile-brand brand">
+                    <span class="brand-mark">J</span>
+                    <span>JOZ</span>
+                </a>
+
+                <div class="auth-heading">
+                    <span class="auth-label">WELCOME BACK</span>
+                    <h2>Sign in to your account</h2>
+                    <p>Enter your account details to continue to JOZ.</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label-row">
+                            <label for="password">Password</label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="loginMessage" class="auth-message" role="alert" hidden></div>
+
+                    <button type="submit" class="auth-submit-btn">
+                        Sign In
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="auth-divider">
+                    <span>New to JOZ?</span>
+                </div>
+
+                <p class="auth-switch">
+                    Don't have a student account?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+                <p class="auth-security-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Your account information is protected.
+                </p>
+
+            </div>
+
+            <footer class="auth-page-footer">
+                <span>© <span id="currentYear"></span> JOZ</span>
+                <a href="../../index.html">Back to home</a>
+            </footer>
+
+        </section>
+
+    </main>
+    <script src="../../js/api.js" defer></script>
+    <script src="../../js/session.js" defer></script>
+    <script src="../../js/auth.js" defer></script>
+
+</body>
+</html>
