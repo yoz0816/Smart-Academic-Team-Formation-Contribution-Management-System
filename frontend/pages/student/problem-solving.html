@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-Solving Ability | JOZ</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-problem-solving.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="sidebar-brand">
+                <a href="../../index.html" class="brand-logo">JOZ<span>.</span></a>
+                <p>Academic Teams</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MAIN MENU</span>
+                    <a href="dashboard.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌂</span>
+                        <span>Overview</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MY ACADEMIC PROFILE</span>
+
+                    <a href="academic-profile.html" class="sidebar-link">
+                        <span class="sidebar-icon">▤</span>
+                        <span>Academic Profile</span>
+                    </a>
+
+                    <a href="skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Technical Skills</span>
+                    </a>
+
+                    <a href="experience.html" class="sidebar-link">
+                        <span class="sidebar-icon">▥</span>
+                        <span>Academic Experience</span>
+                    </a>
+
+                    <a href="interests.html" class="sidebar-link">
+                        <span class="sidebar-icon">✦</span>
+                        <span>Student Interests</span>
+                    </a>
+
+                    <a href="soft-skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">◇</span>
+                        <span>Soft Skills</span>
+                    </a>
+
+                    <a href="problem-solving.html" class="sidebar-link active">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Problem-Solving</span>
+                    </a>
+
+                    <a href="preferences.html" class="sidebar-link">
+                        <span class="sidebar-icon">♡</span>
+                        <span>Team Preferences</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">TEAM WORKSPACE</span>
+
+                    <a href="team.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>My Team</span>
+                    </a>
+
+                    <a href="tasks.html" class="sidebar-link">
+                        <span class="sidebar-icon">☷</span>
+                        <span>Tasks & Contributions</span>
+                    </a>
+
+                    <a href="notifications.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>Notifications</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="sidebar-link logout-link" id="logoutButton" type="button">
+                    <span class="sidebar-icon">↪</span>
+                    <span>Log out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar">
+                <button
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    type="button"
+                    aria-label="Toggle sidebar"
+                >☰</button>
+
+                <div class="topbar-right">
+                    <div class="topbar-user">
+                        <div class="user-avatar" id="userAvatar">S</div>
+
+                        <div class="user-details">
+                            <span class="user-name" id="userName">Student</span>
+                            <span class="user-role">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content problem-solving-content">
+
+                <section class="problem-heading">
+                    <div>
+                        <span class="page-eyebrow">MY ACADEMIC PROFILE</span>
+                        <h1>Problem-Solving Ability</h1>
+                        <p>
+                            Assess your problem-solving abilities by selecting a
+                            proficiency level for each category. Be honest about
+                            your current strengths.
+                        </p>
+                    </div>
+
+                    <div class="problem-heading-icon" aria-hidden="true">⌘</div>
+                </section>
+
+                <section class="problem-overview">
+                    <div class="problem-overview-text">
+                        <span class="overview-label">YOUR SELF-ASSESSMENT</span>
+                        <h2>How do you approach challenges?</h2>
+                        <p>
+                            Select the proficiency level that best describes
+                            your current ability in each area.
+                        </p>
+                    </div>
+
+                    <div class="problem-counter">
+                        <strong id="assessmentCount">0/6</strong>
+                        <span>Assessed</span>
+                    </div>
+                </section>
+
+                <section class="problem-instructions">
+                    <div class="problem-instructions-icon" aria-hidden="true">ⓘ</div>
+                    <div>
+                        <h3>Choose the level that reflects your current ability</h3>
+                        <p>
+                            Beginner means you are developing the ability.
+                            Intermediate means you can apply it in familiar
+                            situations. Advanced means you can handle complex
+                            situations independently. Expert means you can
+                            consistently demonstrate and guide others in this area.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="problem-assessments-section">
+                    <div class="problem-section-heading">
+                        <div>
+                            <h2>Problem-Solving Categories</h2>
+                            <p>Assess each of the six categories below.</p>
+                        </div>
+
+                        <span class="problem-total-label">6 CATEGORIES</span>
+                    </div>
+
+                    <div
+                        class="problem-page-status"
+                        id="problemPageStatus"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                    <div class="problem-assessments-grid" id="problemAssessments">
+                        <div class="problem-empty-state">
+                            Loading your assessments...
+                        </div>
+                    </div>
+                </section>
+
+                <section class="problem-information">
+                    <div class="problem-information-icon" aria-hidden="true">ⓘ</div>
+                    <div>
+                        <h3>How this information is used</h3>
+                        <p>
+                            Problem-Solving Ability contributes 10% to the
+                            planned team-formation evaluation. Your assessments
+                            will help the system consider different problem-solving
+                            strengths when forming balanced academic teams.
+                            This percentage is a criterion weight; the team-formation
+                            algorithm integration is handled separately.
+                        </p>
+                    </div>
+                </section>
+
+                <footer class="dashboard-footer">
+                    <span>
+                        © <span id="currentYear"></span> JOZ. All rights reserved.
+                    </span>
+                </footer>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/session.js"></script>
+    <script src="../../js/dashboard.js" defer></script>
+    <script src="../../js/student-problem-solving.js" defer></script>
+</body>
+</html>

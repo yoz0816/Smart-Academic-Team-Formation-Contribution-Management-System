@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Preferences | JOZ</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-preferences.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="sidebar-brand">
+                <a href="../../index.html" class="brand-logo">JOZ<span>.</span></a>
+                <p>Academic Teams</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MAIN MENU</span>
+                    <a href="dashboard.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌂</span>
+                        <span>Overview</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MY ACADEMIC PROFILE</span>
+                    <a href="academic-profile.html" class="sidebar-link">
+                        <span class="sidebar-icon">▤</span>
+                        <span>Academic Profile</span>
+                    </a>
+                    <a href="skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Technical Skills</span>
+                    </a>
+                    <a href="experience.html" class="sidebar-link">
+                        <span class="sidebar-icon">▥</span>
+                        <span>Academic Experience</span>
+                    </a>
+                    <a href="interests.html" class="sidebar-link">
+                        <span class="sidebar-icon">✦</span>
+                        <span>Student Interests</span>
+                    </a>
+                    <a href="soft-skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">◇</span>
+                        <span>Soft Skills</span>
+                    </a>
+                    <a href="problem-solving.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Problem-Solving</span>
+                    </a>
+                    <a href="preferences.html" class="sidebar-link active">
+                        <span class="sidebar-icon">♡</span>
+                        <span>Team Preferences</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">TEAM WORKSPACE</span>
+                    <a href="team.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>My Team</span>
+                    </a>
+                    <a href="tasks.html" class="sidebar-link">
+                        <span class="sidebar-icon">☷</span>
+                        <span>Tasks & Contributions</span>
+                    </a>
+                    <a href="notifications.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>Notifications</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="sidebar-link logout-link" id="logoutButton" type="button">
+                    <span class="sidebar-icon">↪</span>
+                    <span>Log out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar">
+                <button class="sidebar-toggle" id="sidebarToggle" type="button"
+                        aria-label="Toggle sidebar">☰</button>
+
+                <div class="topbar-right">
+                    <div class="topbar-user">
+                        <div class="user-avatar" id="userAvatar">S</div>
+                        <div class="user-details">
+                            <span class="user-name" id="userName">Student</span>
+                            <span class="user-role">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content student-preferences-content">
+
+                <section class="preferences-heading">
+                    <div>
+                        <span class="page-eyebrow">MY ACADEMIC PROFILE</span>
+                        <h1>Preferred Teammates</h1>
+                        <p>
+                            Choose classmates you would like to work with on your
+                            academic projects. You can select up to three students.
+                        </p>
+                    </div>
+                    <div class="preferences-heading-icon" aria-hidden="true">♡</div>
+                </section>
+
+                <section class="preferences-overview">
+                    <div class="preferences-overview-text">
+                        <span class="overview-label">YOUR TEAM PREFERENCES</span>
+                        <h2>Who would you like on your team?</h2>
+                        <p>
+                            Search for registered students and add them to your
+                            preferred teammates list.
+                        </p>
+                    </div>
+
+                    <div class="preferences-counter">
+                        <strong id="selectedCount">0/3</strong>
+                        <span>Selected</span>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel preferences-search-panel">
+                    <div class="preferences-panel-heading">
+                        <div>
+                            <h2>Find Classmates</h2>
+                            <p>Search by a student's full name.</p>
+                        </div>
+                    </div>
+
+                    <div class="preferences-search-box">
+                        <span class="preferences-search-icon" aria-hidden="true">⌕</span>
+                        <input
+                            type="search"
+                            id="studentSearch"
+                            placeholder="Search registered students..."
+                            autocomplete="off"
+                            maxlength="100"
+                            aria-label="Search students by name"
+                        >
+                        <button type="button" id="clearSearchButton"
+                                class="preferences-clear-search" aria-label="Clear search">
+                            ×
+                        </button>
+                    </div>
+
+                    <div class="preferences-search-hint">
+                        Only active student accounts are shown. Your own account
+                        will not appear in the results.
+                    </div>
+
+                    <div class="preferences-results" id="studentResults"
+                        aria-live="polite">
+                        <div class="preferences-empty-state">
+                            Enter a name to find classmates.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel preferences-selected-panel">
+                    <div class="preferences-panel-heading">
+                        <div>
+                            <h2>Your Preferred Teammates</h2>
+                            <p>
+                                These are the classmates you have selected.
+                                You can remove or replace them at any time.
+                            </p>
+                        </div>
+                        <span class="preferences-limit">Maximum 3</span>
+                    </div>
+
+                    <div class="selected-preferences-list" id="selectedStudents">
+                        <div class="preferences-empty-state">
+                            Loading your preferences...
+                        </div>
+                    </div>
+
+                    <div class="preferences-footer">
+                        <div class="preferences-status" id="preferencesStatus"
+                            role="status" aria-live="polite"></div>
+
+                        <button type="button" class="preferences-save-button"
+                                id="savePreferencesButton" disabled>
+                            <span>Save Preferences</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="preferences-information">
+                    <div class="preferences-information-icon" aria-hidden="true">ⓘ</div>
+                    <div>
+                        <h3>How team preferences are considered</h3>
+                        <p>
+                            Student preferences contribute 10% to the team formation
+                            evaluation. When two students select each other, their
+                            mutual preference receives priority. Preferences do not
+                            guarantee that selected classmates will be placed together.
+                            Project eligibility and balanced team formation remain
+                            important.
+                        </p>
+                    </div>
+                </section>
+
+                <footer class="dashboard-footer">
+                    <span>© <span id="currentYear"></span> JOZ. All rights reserved.</span>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/session.js"></script>
+    <script src="../../js/dashboard.js" defer></script>
+    <script src="../../js/student-preferences.js" defer></script>
+</body>
+</html>

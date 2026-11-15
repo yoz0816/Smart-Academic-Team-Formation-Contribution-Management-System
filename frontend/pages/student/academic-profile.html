@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your academic information in JOZ.">
+    <title>Academic Information | JOZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-profile.css">
+</head>
+
+<body class="dashboard-page">
+<div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-brand">
+            <a href="../../index.html" class="brand-logo">
+                <span class="brand-mark">J</span>
+                <span class="brand-name">JOZ<span>.</span></span>
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Overview</p>
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="profile.html" class="sidebar-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Academic Profile</p>
+            <nav class="sidebar-nav" aria-label="Academic profile navigation">
+                <a href="academic-profile.html" class="sidebar-link active">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academic Information</span>
+                </a>
+                <a href="skills.html" class="sidebar-link">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Technical Skills</span>
+                </a>
+                <a href="experience.html" class="sidebar-link">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Academic Experience</span>
+                </a>
+                <a href="interests.html" class="sidebar-link">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Interests</span>
+                </a>
+                <a href="preferences.html" class="sidebar-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Team Preferences</span>
+                </a>
+                <a href="soft-skills.html" class="sidebar-link">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Soft Skills</span>
+                </a>
+                <a href="problem-solving.html" class="sidebar-link">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Problem-Solving</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Team Workspace</p>
+            <nav class="sidebar-nav" aria-label="Team workspace navigation">
+                <a href="my-team.html" class="sidebar-link">
+                    <i class="fa-solid fa-people-roof"></i>
+                    <span>My Team</span>
+                </a>
+                <a href="tasks.html" class="sidebar-link">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Tasks & Contributions</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Communication</p>
+            <nav class="sidebar-nav" aria-label="Communication navigation">
+                <a href="notifications.html" class="sidebar-link">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-footer">
+            <button type="button" class="sidebar-link" id="logoutButton">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <div class="topbar-left">
+                <button
+                    type="button"
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    aria-label="Toggle navigation"
+                    aria-controls="dashboardSidebar"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="topbar-heading">
+                    <h1>Academic Information</h1>
+                    <p>Manage your university and programme details.</p>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <a href="notifications.html" class="notification-button" aria-label="View notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-indicator"></span>
+                </a>
+
+                <div class="topbar-divider"></div>
+
+                <a href="profile.html" class="topbar-user">
+                    <div class="user-avatar" id="userAvatar">S</div>
+                    <div class="user-details">
+                        <span class="user-name" id="userName">Student</span>
+                        <span class="user-role">Student Account</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="dashboard-content student-profile-content">
+            <div class="page-heading">
+                <div>
+                    <p class="page-eyebrow">STUDENT WORKSPACE</p>
+                    <h2>Academic Information</h2>
+                    <p>
+                        Keep your university and programme information accurate
+                        to support the academic team formation process.
+                    </p>
+                </div>
+            </div>
+
+            <section class="academic-profile-overview">
+                <div class="academic-profile-overview-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="academic-profile-overview-copy">
+                    <h3>Your academic profile</h3>
+                    <p>
+                        Complete these details to help lecturers identify your
+                        academic background and programme.
+                    </p>
+                </div>
+
+                <div class="academic-completion">
+                    <div class="academic-completion-heading">
+                        <span>Completion</span>
+                        <strong id="completionLabel">0%</strong>
+                    </div>
+                    <div class="academic-completion-track">
+                        <div class="academic-completion-fill" id="completionBar"></div>
+                    </div>
+                </div>
+            </section>
+
+            <form id="academicProfileForm" class="academic-profile-form" novalidate>
+
+                <section class="dashboard-panel academic-form-panel">
+                    <div class="academic-section-heading">
+                        <div class="academic-section-icon">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <div>
+                            <h3>University identification</h3>
+                            <p>Your official student identification details.</p>
+                        </div>
+                    </div>
+
+                    <div class="academic-form-grid">
+                        <div class="academic-field">
+                            <label for="studentId">Student ID</label>
+                            <input
+                                type="text"
+                                id="studentId"
+                                name="student_id"
+                                maxlength="50"
+                                placeholder="e.g. UGR/1234/16"
+                                autocomplete="off"
+                            >
+                            <small>Your university-issued student identification number.</small>
+                        </div>
+
+                        <div class="academic-field">
+                            <label for="university">University</label>
+                            <input
+                                type="text"
+                                id="university"
+                                name="university"
+                                maxlength="150"
+                                placeholder="Enter your university"
+                                autocomplete="organization"
+                            >
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel academic-form-panel">
+                    <div class="academic-section-heading">
+                        <div class="academic-section-icon">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <h3>Academic department</h3>
+                            <p>Specify your faculty and department.</p>
+                        </div>
+                    </div>
+
+                    <div class="academic-form-grid">
+                        <div class="academic-field">
+                            <label for="faculty">Faculty / College</label>
+                            <input
+                                type="text"
+                                id="faculty"
+                                name="faculty"
+                                maxlength="150"
+                                placeholder="e.g. Faculty of Computing"
+                            >
+                        </div>
+
+                        <div class="academic-field">
+                            <label for="department">Department</label>
+                            <input
+                                type="text"
+                                id="department"
+                                name="department"
+                                maxlength="150"
+                                placeholder="e.g. Software Engineering"
+                            >
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel academic-form-panel">
+                    <div class="academic-section-heading">
+                        <div class="academic-section-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div>
+                            <h3>Degree programme</h3>
+                            <p>Tell us about your current programme and study year.</p>
+                        </div>
+                    </div>
+
+                    <div class="academic-form-grid">
+                        <div class="academic-field">
+                            <label for="degreeProgram">Degree programme</label>
+                            <input
+                                type="text"
+                                id="degreeProgram"
+                                name="degree_program"
+                                maxlength="150"
+                                placeholder="e.g. BSc in Software Engineering"
+                            >
+                        </div>
+
+                        <div class="academic-field">
+                            <label for="yearOfStudy">Year of study</label>
+                            <select id="yearOfStudy" name="year_of_study">
+                                <option value="">Select your current year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                                <option value="5">5th Year</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="academic-profile-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        GPA and CGPA are managed separately under
+                        <a href="experience.html">Academic Experience</a>.
+                        They are not part of this form.
+                    </p>
+                </div>
+
+                <div class="academic-form-footer">
+                    <p id="profileMessage" class="academic-form-message" role="status" aria-live="polite"></p>
+
+                    <button type="submit" class="btn btn-primary academic-save-button" id="saveProfileButton">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <span>Save Academic Information</span>
+                    </button>
+                </div>
+
+            </form>
+
+            <footer class="dashboard-footer">
+                <p>
+                    &copy; <span id="currentYear"></span> JOZ.
+                    Smart Academic Team Formation & Contribution Management System.
+                </p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<script src="../../js/api.js"></script>
+<script src="../../js/session.js"></script>
+<script src="../../js/dashboard.js" defer></script>
+<script src="../../js/student-profile.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills | JOZ</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-soft-skills.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="sidebar-brand">
+                <a href="../../index.html" class="brand-logo">JOZ<span>.</span></a>
+                <p>Academic Teams</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MAIN MENU</span>
+                    <a href="dashboard.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌂</span>
+                        <span>Overview</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MY ACADEMIC PROFILE</span>
+                    <a href="academic-profile.html" class="sidebar-link">
+                        <span class="sidebar-icon">▤</span>
+                        <span>Academic Profile</span>
+                    </a>
+                    <a href="skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Technical Skills</span>
+                    </a>
+                    <a href="experience.html" class="sidebar-link">
+                        <span class="sidebar-icon">▥</span>
+                        <span>Academic Experience</span>
+                    </a>
+                    <a href="interests.html" class="sidebar-link">
+                        <span class="sidebar-icon">✦</span>
+                        <span>Student Interests</span>
+                    </a>
+                    <a href="soft-skills.html" class="sidebar-link active">
+                        <span class="sidebar-icon">◇</span>
+                        <span>Soft Skills</span>
+                    </a>
+                    <a href="problem-solving.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Problem-Solving</span>
+                    </a>
+                    <a href="preferences.html" class="sidebar-link">
+                        <span class="sidebar-icon">♡</span>
+                        <span>Team Preferences</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">TEAM WORKSPACE</span>
+                    <a href="team.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>My Team</span>
+                    </a>
+                    <a href="tasks.html" class="sidebar-link">
+                        <span class="sidebar-icon">☷</span>
+                        <span>Tasks & Contributions</span>
+                    </a>
+                    <a href="notifications.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>Notifications</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="sidebar-link logout-link" id="logoutButton" type="button">
+                    <span class="sidebar-icon">↪</span>
+                    <span>Log out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar">
+                <button class="sidebar-toggle" id="sidebarToggle" type="button"
+                        aria-label="Toggle sidebar">☰</button>
+
+                <div class="topbar-right">
+                    <div class="topbar-user">
+                        <div class="user-avatar" id="userAvatar">S</div>
+                        <div class="user-details">
+                            <span class="user-name" id="userName">Student</span>
+                            <span class="user-role">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content soft-skills-content">
+
+                <section class="soft-skills-heading">
+                    <div>
+                        <span class="page-eyebrow">MY ACADEMIC PROFILE</span>
+                        <h1>Soft Skills</h1>
+                        <p>
+                            Identify the personal and interpersonal abilities
+                            you bring to an academic project team.
+                        </p>
+                    </div>
+
+                    <div class="soft-skills-heading-icon" aria-hidden="true">◇</div>
+                </section>
+
+                <section class="soft-skills-overview">
+                    <div>
+                        <span class="overview-label">YOUR SOFT SKILLS</span>
+                        <h2>What are your strongest abilities?</h2>
+                        <p>
+                            Select the skills that describe you and assess your
+                            current proficiency level honestly.
+                        </p>
+                    </div>
+
+                    <div class="soft-skills-counter">
+                        <strong id="selectedCount">0/6</strong>
+                        <span>Selected</span>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel soft-skills-panel">
+                    <div class="soft-skills-panel-heading">
+                        <div>
+                            <h2>Choose Your Soft Skills</h2>
+                            <p>
+                                Select a skill and choose your proficiency level.
+                                You can select any number of skills.
+                            </p>
+                        </div>
+                        <span class="soft-skills-limit">6 Available</span>
+                    </div>
+
+                    <div class="soft-skills-grid" id="softSkillsGrid">
+                        <div class="soft-skills-empty">
+                            Loading your soft skills...
+                        </div>
+                    </div>
+
+                    <div class="soft-skills-footer">
+                        <div class="soft-skills-status" id="softSkillsStatus"
+                            role="status" aria-live="polite"></div>
+
+                        <button type="button" class="soft-skills-save-button"
+                                id="saveSoftSkillsButton" disabled>
+                            <span>Save Soft Skills</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="soft-skills-information">
+                    <div class="soft-skills-information-icon" aria-hidden="true">ⓘ</div>
+                    <div>
+                        <h3>How soft skills are considered</h3>
+                        <p>
+                            Soft Skills contribute 10% to the team formation
+                            evaluation. Your selected skills and self-assessed
+                            proficiency levels help evaluate how your abilities
+                            complement those of other students. Please choose
+                            levels that accurately reflect your current abilities.
+                        </p>
+                    </div>
+                </section>
+
+                <footer class="dashboard-footer">
+                    <span>© <span id="currentYear"></span> JOZ. All rights reserved.</span>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/session.js"></script>
+    <script src="../../js/dashboard.js" defer></script>
+    <script src="../../js/student-soft-skills.js" defer></script>
+</body>
+</html>

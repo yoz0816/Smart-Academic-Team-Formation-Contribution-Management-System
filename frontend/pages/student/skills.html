@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your technical skills in JOZ.">
+    <title>Technical Skills | JOZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-skills.css">
+</head>
+
+<body class="dashboard-page">
+<div class="dashboard-layout">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-brand">
+            <a href="../../index.html" class="brand-logo">
+                <span class="brand-mark">J</span>
+                <span class="brand-name">JOZ<span>.</span></span>
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Overview</p>
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="profile.html" class="sidebar-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Academic Profile</p>
+            <nav class="sidebar-nav" aria-label="Academic profile navigation">
+                <a href="academic-profile.html" class="sidebar-link">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academic Information</span>
+                </a>
+                <a href="skills.html" class="sidebar-link active">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Technical Skills</span>
+                </a>
+                <a href="experience.html" class="sidebar-link">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Academic Experience</span>
+                </a>
+                <a href="interests.html" class="sidebar-link">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Interests</span>
+                </a>
+                <a href="preferences.html" class="sidebar-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Team Preferences</span>
+                </a>
+                <a href="soft-skills.html" class="sidebar-link">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Soft Skills</span>
+                </a>
+                <a href="problem-solving.html" class="sidebar-link">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Problem-Solving</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Team Workspace</p>
+            <nav class="sidebar-nav" aria-label="Team workspace navigation">
+                <a href="my-team.html" class="sidebar-link">
+                    <i class="fa-solid fa-people-roof"></i>
+                    <span>My Team</span>
+                </a>
+                <a href="tasks.html" class="sidebar-link">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Tasks & Contributions</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Communication</p>
+            <nav class="sidebar-nav" aria-label="Communication navigation">
+                <a href="notifications.html" class="sidebar-link">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-footer">
+            <button type="button" class="sidebar-link" id="logoutButton">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-topbar">
+            <div class="topbar-left">
+                <button
+                    type="button"
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    aria-label="Toggle navigation"
+                    aria-controls="dashboardSidebar"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="topbar-heading">
+                    <h1>Technical Skills</h1>
+                    <p>Manage your technical abilities and proficiency.</p>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <a href="notifications.html" class="notification-button" aria-label="View notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-indicator"></span>
+                </a>
+
+                <div class="topbar-divider"></div>
+
+                <a href="profile.html" class="topbar-user">
+                    <div class="user-avatar" id="userAvatar">S</div>
+                    <div class="user-details">
+                        <span class="user-name" id="userName">Student</span>
+                        <span class="user-role">Student Account</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="dashboard-content student-skills-content">
+
+            <div class="page-heading">
+                <div>
+                    <p class="page-eyebrow">STUDENT WORKSPACE</p>
+                    <h2>Technical Skills</h2>
+                    <p>
+                        Add the technical skills you have developed and indicate
+                        your current proficiency level.
+                    </p>
+                </div>
+            </div>
+
+            <section class="skills-overview">
+                <div class="skills-overview-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="skills-overview-copy">
+                    <h3>Build your technical profile</h3>
+                    <p>
+                        Your skills help the team formation process identify
+                        complementary strengths across project teams.
+                    </p>
+                </div>
+
+                <div class="skills-stat">
+                    <strong id="totalSkills">0</strong>
+                    <span>Skills added</span>
+                </div>
+            </section>
+
+            <div class="skills-layout">
+
+                <section class="dashboard-panel skills-form-panel">
+                    <div class="skills-section-heading">
+                        <div class="skills-section-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div>
+                            <h3 id="formHeading">Add a technical skill</h3>
+                            <p id="formDescription">Enter a skill and select your proficiency.</p>
+                        </div>
+                    </div>
+
+                    <form id="skillForm" novalidate>
+                        <div class="skills-field">
+                            <label for="skillName">Skill name</label>
+                            <input
+                                type="text"
+                                id="skillName"
+                                name="skill_name"
+                                maxlength="100"
+                                placeholder="e.g. JavaScript"
+                                autocomplete="off"
+                                required
+                            >
+                            <small>Enter one skill at a time.</small>
+                        </div>
+
+                        <div class="skills-field">
+                            <label for="skillCategory">Category</label>
+                            <select id="skillCategory" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="Programming Languages">Programming Languages</option>
+                                <option value="Frameworks & Tools">Frameworks & Tools</option>
+                                <option value="Databases">Databases</option>
+                                <option value="Mobile Development">Mobile Development</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="Testing & QA">Testing & QA</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="skills-field">
+                            <label for="skillProficiency">Proficiency level</label>
+                            <select id="skillProficiency" name="proficiency" required>
+                                <option value="">Select your level</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                            <small>Choose the level that best describes your current ability.</small>
+                        </div>
+
+                        <div class="skills-form-actions">
+                            <button type="submit" class="btn btn-primary skills-submit-button" id="saveSkillButton">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Add Skill</span>
+                            </button>
+
+                            <button type="button" class="skills-cancel-button" id="cancelEditButton" hidden>
+                                Cancel
+                            </button>
+                        </div>
+
+                        <p id="skillFormMessage" class="skills-form-message" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div class="skills-form-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p>
+                            Be honest about your proficiency. Your technical skills
+                            contribute 35% to the team formation evaluation.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="skills-list-section">
+                    <div class="skills-list-heading">
+                        <div>
+                            <h3>My technical skills</h3>
+                            <p>Manage the skills saved to your profile.</p>
+                        </div>
+
+                        <span class="skills-count" id="skillsCount">0 skills</span>
+                    </div>
+
+                    <div id="skillsList" class="skills-list" aria-live="polite">
+                        <div class="skills-loading">
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+                            <span>Loading your skills...</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <footer class="dashboard-footer">
+                <p>
+                    &copy; <span id="currentYear"></span> JOZ.
+                    Smart Academic Team Formation & Contribution Management System.
+                </p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<script src="../../js/api.js"></script>
+<script src="../../js/session.js"></script>
+<script src="../../js/dashboard.js" defer></script>
+<script src="../../js/student-skills.js" defer></script>
+
+</body>
+</html>

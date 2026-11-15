@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Interests | JOZ</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-interests.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="sidebar-brand">
+                <a href="../../index.html" class="brand-logo">JOZ<span>.</span></a>
+                <p>Academic Teams</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MAIN MENU</span>
+                    <a href="dashboard.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌂</span>
+                        <span>Overview</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">MY ACADEMIC PROFILE</span>
+                    <a href="academic-profile.html" class="sidebar-link">
+                        <span class="sidebar-icon">▤</span>
+                        <span>Academic Profile</span>
+                    </a>
+                    <a href="skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Technical Skills</span>
+                    </a>
+                    <a href="experience.html" class="sidebar-link">
+                        <span class="sidebar-icon">▥</span>
+                        <span>Academic Experience</span>
+                    </a>
+                    <a href="interests.html" class="sidebar-link active">
+                        <span class="sidebar-icon">✦</span>
+                        <span>Student Interests</span>
+                    </a>
+                    <a href="soft-skills.html" class="sidebar-link">
+                        <span class="sidebar-icon">◇</span>
+                        <span>Soft Skills</span>
+                    </a>
+                    <a href="problem-solving.html" class="sidebar-link">
+                        <span class="sidebar-icon">⌘</span>
+                        <span>Problem-Solving</span>
+                    </a>
+                    <a href="preferences.html" class="sidebar-link">
+                        <span class="sidebar-icon">♡</span>
+                        <span>Team Preferences</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">TEAM WORKSPACE</span>
+                    <a href="team.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>My Team</span>
+                    </a>
+                    <a href="tasks.html" class="sidebar-link">
+                        <span class="sidebar-icon">☷</span>
+                        <span>Tasks & Contributions</span>
+                    </a>
+                    <a href="notifications.html" class="sidebar-link">
+                        <span class="sidebar-icon">♧</span>
+                        <span>Notifications</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="sidebar-link logout-link" id="logoutButton" type="button">
+                    <span class="sidebar-icon">↪</span>
+                    <span>Log out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar">
+                <button class="sidebar-toggle" id="sidebarToggle" type="button"
+                        aria-label="Toggle sidebar">☰</button>
+
+                <div class="topbar-right">
+                    <div class="topbar-user">
+                        <div class="user-avatar" id="userAvatar">S</div>
+                        <div class="user-details">
+                            <span class="user-name" id="userName">Student</span>
+                            <span class="user-role">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content student-interests-content">
+
+                <section class="interests-heading">
+                    <div>
+                        <span class="page-eyebrow">MY ACADEMIC PROFILE</span>
+                        <h1>Student Interests</h1>
+                        <p>
+                            Select the areas of computing and technology that interest
+                            you. Your choices help the team formation process identify
+                            students with complementary academic interests.
+                        </p>
+                    </div>
+
+                    <div class="interests-heading-icon">✦</div>
+                </section>
+
+                <section class="interests-overview">
+                    <div class="interests-overview-text">
+                        <span class="overview-label">YOUR INTERESTS</span>
+                        <h2>Explore what interests you</h2>
+                        <p>
+                            Choose all the areas that match your interests. You can
+                            update your selections whenever your interests change.
+                        </p>
+                    </div>
+
+                    <div class="interests-counter">
+                        <strong id="selectedCount">0</strong>
+                        <span>Selected</span>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel interests-panel">
+                    <div class="interests-panel-header">
+                        <div>
+                            <h2>Available Interest Areas</h2>
+                            <p>Select one or more areas from the list below.</p>
+                        </div>
+
+                        <button type="button" class="interests-clear-button"
+                                id="clearInterestsButton">
+                            Clear selection
+                        </button>
+                    </div>
+
+                    <div class="interests-grid" id="interestsGrid">
+                        <div class="interests-loading">Loading your interests...</div>
+                    </div>
+
+                    <div class="interests-footer">
+                        <div class="interests-status" id="interestsStatus"
+                            role="status" aria-live="polite"></div>
+
+                        <button type="button" class="interests-save-button"
+                                id="saveInterestsButton" disabled>
+                            <span>Save Interests</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </section>
+
+                <p class="interests-note">
+                    Your selected interests contribute 15% to the team's formation
+                    evaluation. They are considered alongside technical skills,
+                    academic experience, preferences, soft skills, and
+                    problem-solving ability.
+                </p>
+
+                <footer class="dashboard-footer">
+                    <span>© <span id="currentYear"></span> JOZ. All rights reserved.</span>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/session.js"></script>
+    <script src="../../js/dashboard.js" defer></script>
+    <script src="../../js/student-interests.js" defer></script>
+</body>
+</html>
