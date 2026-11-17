@@ -141,3 +141,15 @@ class User(Base):
         back_populates="evaluator",
         foreign_keys="ContributionEvaluation.evaluator_id",
     )
+    notifications_received = relationship(
+        "Notification",
+        foreign_keys="Notification.recipient_id",
+        back_populates="recipient",
+        cascade="all, delete-orphan",
+    )
+
+    notifications_sent = relationship(
+        "Notification",
+        foreign_keys="Notification.actor_id",
+        back_populates="actor",
+    )
