@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Response, status
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.student_soft_skill import (
@@ -43,6 +43,7 @@ def list_soft_skills(
     "",
     response_model=StudentSoftSkillResponse,
     status_code=status.HTTP_201_CREATED,
+    dependencies=[Depends(require_csrf)],
 )
 def add_soft_skill(
     data: StudentSoftSkillCreate,
@@ -59,7 +60,7 @@ def add_soft_skill(
         ) from error
 
 
-@router.put("/{skill_id}", response_model=StudentSoftSkillResponse)
+@router.put("/{skill_id}", response_model=StudentSoftSkillResponse, dependencies=[Depends(require_csrf)])
 def edit_soft_skill(
     skill_id: int,
     data: StudentSoftSkillUpdate,
@@ -84,7 +85,7 @@ def edit_soft_skill(
         ) from error
 
 
-@router.delete("/{skill_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{skill_id}", status_code=status.HTTP_204_NO_CONTENT, dependencies=[Depends(require_csrf)])
 def remove_soft_skill(
     skill_id: int,
     current_user: User = Depends(require_roles("student")),

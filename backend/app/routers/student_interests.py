@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.student_interest import (
@@ -33,7 +33,7 @@ def list_interests(
     }
 
 
-@router.put("", response_model=StudentInterestResponse)
+@router.put("", response_model=StudentInterestResponse, dependencies=[Depends(require_csrf)])
 def save_interests(
     data: StudentInterestUpdate,
     current_user: User = Depends(require_roles("student")),

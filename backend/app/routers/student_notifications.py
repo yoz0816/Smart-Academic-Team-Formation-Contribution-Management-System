@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.notification import (
@@ -60,6 +60,7 @@ def read_unread_count(
 @router.patch(
     "/read-all",
     response_model=NotificationReadAllResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def read_all_notifications(
     current_user: User = Depends(require_roles("student")),
@@ -79,6 +80,7 @@ def read_all_notifications(
 @router.patch(
     "/{notification_id}/read",
     response_model=NotificationResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def read_single_notification(
     notification_id: int,

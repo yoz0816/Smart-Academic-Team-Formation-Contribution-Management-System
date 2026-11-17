@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.student_profile import (
@@ -52,6 +52,7 @@ def read_academic_profile(
 @router.put(
     "",
     response_model=AcademicProfileResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def update_academic_profile(
     data: AcademicProfileUpdate,

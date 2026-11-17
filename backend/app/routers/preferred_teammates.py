@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.preferred_teammate import (
@@ -60,6 +60,7 @@ def read_preferences(
 @router.put(
     "",
     response_model=PreferredTeammatesResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def save_preferences(
     data: PreferredTeammateUpdate,

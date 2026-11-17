@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.student_academic_experience import (
@@ -34,6 +34,7 @@ def get_my_academic_experience(
     "",
     response_model=StudentAcademicExperienceResponse,
     status_code=status.HTTP_201_CREATED,
+    dependencies=[Depends(require_csrf)],
 )
 def submit_academic_experience(
     data: StudentAcademicExperienceCreate,
@@ -51,7 +52,7 @@ def submit_academic_experience(
     return create_student_academic_experience(db, current_user, data)
 
 
-@router.put("", response_model=StudentAcademicExperienceResponse)
+@router.put("", response_model=StudentAcademicExperienceResponse, dependencies=[Depends(require_csrf)])
 def edit_academic_experience(
     data: StudentAcademicExperienceUpdate,
     current_user: User = Depends(require_roles("student")),

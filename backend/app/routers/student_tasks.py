@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.task_contribution import (
@@ -44,6 +44,7 @@ def list_my_tasks(
 @router.patch(
     "/assignments/{assignee_id}/status",
     response_model=TaskAssigneeResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def update_my_task_status(
     assignee_id: int,
@@ -62,6 +63,7 @@ def update_my_task_status(
 @router.post(
     "/assignments/{assignee_id}/submission",
     response_model=TaskSubmissionResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def submit_my_task(
     assignee_id: int,

@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Response, status
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import require_roles
+from app.core.dependencies import require_csrf, require_roles
 from app.database.session import get_db
 from app.models import User
 from app.schemas.student_problem_solving import (
@@ -43,6 +43,7 @@ def list_problem_solving_abilities(
     "",
     response_model=StudentProblemSolvingResponse,
     status_code=status.HTTP_201_CREATED,
+    dependencies=[Depends(require_csrf)],
 )
 def add_problem_solving_ability(
     data: StudentProblemSolvingCreate,
@@ -66,6 +67,7 @@ def add_problem_solving_ability(
 @router.put(
     "/{ability_id}",
     response_model=StudentProblemSolvingResponse,
+    dependencies=[Depends(require_csrf)],
 )
 def edit_problem_solving_ability(
     ability_id: int,
@@ -98,6 +100,7 @@ def edit_problem_solving_ability(
 @router.delete(
     "/{ability_id}",
     status_code=status.HTTP_204_NO_CONTENT,
+    dependencies=[Depends(require_csrf)],
 )
 def remove_problem_solving_ability(
     ability_id: int,
