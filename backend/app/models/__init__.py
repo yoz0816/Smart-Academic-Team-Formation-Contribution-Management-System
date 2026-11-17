@@ -1,4 +1,5 @@
 from app.models.user import User
+from app.models.notification import Notification
 from app.models.user_session import UserSession
 from app.models.student_profile import StudentProfile
 from app.models.student_skill import StudentSkill
@@ -20,6 +21,7 @@ from app.models.contribution_evaluation import ContributionEvaluation
 
 __all__ = [
     "User",
+    "Notification",
     "UserSession",
     "StudentProfile",
     "StudentSkill",
