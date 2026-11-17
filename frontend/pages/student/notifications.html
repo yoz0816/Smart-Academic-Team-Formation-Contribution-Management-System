@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your JOZ academic team and contribution notifications.">
+    <title>Notifications | JOZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/student-notifications.css">
+</head>
+
+<body class="dashboard-page">
+<div class="dashboard-layout">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-brand">
+            <a href="../../index.html" class="brand-logo">
+                <span class="brand-mark">J</span>
+                <span class="brand-name">JOZ<span>.</span></span>
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Overview</p>
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="academic-profile.html" class="sidebar-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Academic Profile</p>
+            <nav class="sidebar-nav" aria-label="Academic profile navigation">
+                <a href="academic-profile.html" class="sidebar-link">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academic Information</span>
+                </a>
+                <a href="skills.html" class="sidebar-link">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Technical Skills</span>
+                </a>
+                <a href="experience.html" class="sidebar-link">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Academic Experience</span>
+                </a>
+                <a href="interests.html" class="sidebar-link">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Interests</span>
+                </a>
+                <a href="preferences.html" class="sidebar-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Team Preferences</span>
+                </a>
+                <a href="soft-skills.html" class="sidebar-link">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Soft Skills</span>
+                </a>
+                <a href="problem-solving.html" class="sidebar-link">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Problem-Solving</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Team Workspace</p>
+            <nav class="sidebar-nav" aria-label="Team workspace navigation">
+                <a href="my-team.html" class="sidebar-link">
+                    <i class="fa-solid fa-people-roof"></i>
+                    <span>My Team</span>
+                </a>
+                <a href="tasks.html" class="sidebar-link">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Tasks & Contributions</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="sidebar-section-title">Communication</p>
+            <nav class="sidebar-nav" aria-label="Communication navigation">
+                <a href="notifications.html" class="sidebar-link active" aria-current="page">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                    <span class="sidebar-notification-count" id="sidebarUnreadCount" hidden>0</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-footer">
+            <button type="button" class="sidebar-link" id="logoutButton">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <div class="topbar-left">
+                <button
+                    type="button"
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    aria-label="Toggle navigation"
+                    aria-controls="dashboardSidebar"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="topbar-heading">
+                    <h1>Notifications</h1>
+                    <p>Stay updated on your academic team activities.</p>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <a href="notifications.html" class="notification-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-indicator" id="topbarNotificationIndicator" hidden></span>
+                </a>
+
+                <div class="topbar-divider"></div>
+
+                <a href="academic-profile.html" class="topbar-user">
+                    <div class="user-avatar" id="userAvatar">S</div>
+                    <div class="user-details">
+                        <span class="user-name" id="userName">Student</span>
+                        <span class="user-role">Student Account</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="dashboard-content student-notifications-content">
+
+            <div class="notifications-page-heading">
+                <div>
+                    <p class="page-eyebrow">STUDENT WORKSPACE</p>
+                    <h2>Notifications</h2>
+                    <p>Important updates about your team, tasks, and contributions.</p>
+                </div>
+
+                <button type="button" class="notifications-refresh" id="refreshNotificationsButton">
+                    <i class="fa-solid fa-rotate"></i>
+                    <span>Refresh</span>
+                </button>
+            </div>
+
+            <div class="notification-summary">
+                <div class="notification-summary-icon">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div>
+                    <span class="notification-summary-label">Unread notifications</span>
+                    <strong id="unreadCount">0</strong>
+                </div>
+                <span class="notification-summary-note">Your latest academic updates</span>
+            </div>
+
+            <div id="notificationMessage" class="notification-message" role="status" aria-live="polite" hidden></div>
+
+            <section class="notifications-panel" aria-label="Your notifications">
+                <div class="notifications-toolbar">
+                    <div class="notification-tabs" role="tablist" aria-label="Notification filter">
+                        <button
+                            type="button"
+                            class="notification-tab active"
+                            id="allNotificationsTab"
+                            data-filter="all"
+                            role="tab"
+                            aria-selected="true"
+                        >
+                            All
+                            <span id="allCount">0</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="notification-tab"
+                            id="unreadNotificationsTab"
+                            data-filter="unread"
+                            role="tab"
+                            aria-selected="false"
+                        >
+                            Unread
+                            <span id="unreadTabCount">0</span>
+                        </button>
+                    </div>
+
+                    <button type="button" class="mark-all-read-button" id="markAllReadButton">
+                        <i class="fa-solid fa-check-double"></i>
+                        <span>Mark all as read</span>
+                    </button>
+                </div>
+
+                <div id="notificationsLoading" class="notifications-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span>Loading your notifications...</span>
+                </div>
+
+                <div id="notificationsList" class="notifications-list" hidden></div>
+
+                <div id="notificationsEmpty" class="notifications-empty" hidden>
+                    <div class="notifications-empty-icon">
+                        <i class="fa-regular fa-bell-slash"></i>
+                    </div>
+                    <h3 id="notificationsEmptyTitle">No notifications yet</h3>
+                    <p id="notificationsEmptyDescription">
+                        Updates about your academic activities will appear here.
+                    </p>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>
+                    &copy; <span id="currentYear"></span> JOZ.
+                    Smart Academic Team Formation & Contribution Management System.
+                </p>
+            </footer>
+        </section>
+    </main>
+</div>
+
+<script src="../../js/api.js"></script>
+<script src="../../js/session.js"></script>
+<script src="../../js/dashboard.js" defer></script>
+<script src="../../js/student-notifications.js" defer></script>
+</body>
+</html>
