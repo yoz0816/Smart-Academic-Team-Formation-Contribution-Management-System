@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         showStatus("Saving your teammate preferences...");
 
         try {
-            const response = await window.JOZApi.put(
+            const response = await window.JOZApi.putWithCsrf(
                 "/api/student/preferences",
                 {
                     preferred_user_ids: getSelectedIds()

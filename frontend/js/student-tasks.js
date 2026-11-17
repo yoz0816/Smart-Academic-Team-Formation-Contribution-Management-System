@@ -516,10 +516,10 @@ async function initializeStudentTasks() {
         button.disabled = true;
 
         try {
-            await window.JOZApi.patch(
-                `/api/student/tasks/assignments/${task.assignee_id}/status`,
-                { status: "in_progress" }
-            );
+            await window.JOZApi.patchWithCsrf(
+            `/api/student/tasks/assignments/${task.assignee_id}/status`,
+            { status: "in_progress" }
+        );
 
             showMessage("Task started successfully.", "success");
             await loadTasks();
@@ -598,7 +598,7 @@ async function initializeStudentTasks() {
         clearSubmissionMessage();
 
         try {
-            await window.JOZApi.post(
+            await window.JOZApi.postWithCsrf(
                 `/api/student/tasks/assignments/${assigneeId}/submission`,
                 { submission_text: submissionText }
             );

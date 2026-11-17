@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         showStatus("Saving your interests...");
 
         try {
-            const response = await window.JOZApi.put("/api/student/interests", {
+            const response = await window.JOZApi.putWithCsrf("/api/student/interests", {
                 interests: [...selectedInterests]
             });
 

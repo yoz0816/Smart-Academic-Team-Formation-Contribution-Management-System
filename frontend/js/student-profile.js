@@ -131,7 +131,7 @@ async function initializeAcademicProfile() {
         showMessage("Saving your academic information...");
 
         try {
-            const updatedProfile = await window.JOZApi.put(
+            const updatedProfile = await window.JOZApi.putWithCsrf(
                 "/api/student/academic-profile",
                 data
             );

@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
             for (const [name, record] of savedSkills) {
                 if (!selectedSkills.has(name)) {
-                    await window.JOZApi.delete(
+                    await window.JOZApi.deleteWithCsrf(
                         `/api/student/soft-skills/${record.id}`
                     );
                 }
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const existing = savedSkills.get(name);
 
                 if (!existing) {
-                    await window.JOZApi.post(
+                    await window.JOZApi.postWithCsrf(
                         "/api/student/soft-skills",
                         {
                             skill_name: name,
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         }
                     );
                 } else if (existing.proficiency !== proficiency) {
-                    await window.JOZApi.put(
+                    await window.JOZApi.putWithCsrf(
                         `/api/student/soft-skills/${existing.id}`,
                         {
                             skill_name: name,

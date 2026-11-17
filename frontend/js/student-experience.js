@@ -137,8 +137,8 @@ async function initializeStudentExperience() {
             const payload = { cgpa: Number(cgpa.toFixed(2)) };
 
             const record = isEditing
-                ? await window.JOZApi.put("/api/student/academic-experience", payload)
-                : await window.JOZApi.post("/api/student/academic-experience", payload);
+                ? await window.JOZApi.putWithCsrf("/api/student/academic-experience", payload)
+                : await window.JOZApi.postWithCsrf("/api/student/academic-experience", payload);
 
             renderRecord(record);
             showMessage(

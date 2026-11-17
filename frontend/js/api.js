@@ -1,6 +1,7 @@
 "use strict";
+
 window.JOZApi = (() => {
-    const BASE_URL = "http://127.0.0.1:8000";
+    const BASE_URL = "http://localhost:8000";
 
     function getErrorMessage(data, fallback = "Something went wrong. Please try again.") {
         const detail = data?.detail;
@@ -35,10 +36,6 @@ window.JOZApi = (() => {
         });
 
         if (response.status === 204) {
-            if (!response.ok) {
-                throw new Error("The request could not be completed.");
-            }
-
             return null;
         }
 
@@ -48,8 +45,8 @@ window.JOZApi = (() => {
         if (contentType.includes("application/json")) {
             data = await response.json().catch(() => null);
         } else {
-            const text = await response.text().catch(() => "");
-            data = text ? { detail: text } : null;
+            const responseText = await response.text().catch(() => "");
+            data = responseText ? { detail: responseText } : null;
         }
 
         if (!response.ok) {
@@ -113,16 +110,44 @@ window.JOZApi = (() => {
         return data.csrf_token;
     }
 
-    async function postWithCsrf(endpoint, body, options = {}) {
+    async function withCsrf(callback, options = {}) {
         const csrfToken = await getCsrfToken();
         const headers = new Headers(options.headers || {});
 
         headers.set("X-CSRF-Token", csrfToken);
 
-        return post(endpoint, body, {
+        return callback({
             ...options,
             headers
         });
+    }
+
+    function postWithCsrf(endpoint, body, options = {}) {
+        return withCsrf(
+            (secureOptions) => post(endpoint, body, secureOptions),
+            options
+        );
+    }
+
+    function putWithCsrf(endpoint, body, options = {}) {
+        return withCsrf(
+            (secureOptions) => put(endpoint, body, secureOptions),
+            options
+        );
+    }
+
+    function patchWithCsrf(endpoint, body, options = {}) {
+        return withCsrf(
+            (secureOptions) => patch(endpoint, body, secureOptions),
+            options
+        );
+    }
+
+    function deleteWithCsrf(endpoint, options = {}) {
+        return withCsrf(
+            (secureOptions) => deleteRequest(endpoint, secureOptions),
+            options
+        );
     }
 
     return {
@@ -134,6 +159,9 @@ window.JOZApi = (() => {
         patch,
         delete: deleteRequest,
         getCsrfToken,
-        postWithCsrf
+        postWithCsrf,
+        putWithCsrf,
+        patchWithCsrf,
+        deleteWithCsrf
     };
 })();

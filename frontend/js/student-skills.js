@@ -257,12 +257,12 @@ async function initializeStudentSkills() {
 
         try {
             if (isEditing) {
-                await window.JOZApi.put(
+                await window.JOZApi.putWithCsrf(
                     `/api/student/skills/${editingSkillId}`,
                     payload
                 );
             } else {
-                await window.JOZApi.post(
+                await window.JOZApi.postWithCsrf(
                     "/api/student/skills",
                     payload
                 );
@@ -327,7 +327,7 @@ async function initializeStudentSkills() {
             button.disabled = true;
 
             try {
-                await window.JOZApi.delete(
+                await window.JOZApi.deleteWithCsrf(
                     `/api/student/skills/${skillId}`
                 );
 

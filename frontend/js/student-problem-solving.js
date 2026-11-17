@@ -276,11 +276,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             };
 
             const response = existing
-                ? await window.JOZApi.put(
+                ? await window.JOZApi.putWithCsrf(
                     `${API_ENDPOINT}/${existing.id}`,
                     payload
                 )
-                : await window.JOZApi.post(
+                : await window.JOZApi.postWithCsrf(
                     API_ENDPOINT,
                     payload
                 );
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         showStatus(`Removing your ${category} assessment...`);
 
         try {
-            await window.JOZApi.delete(
+            await window.JOZApi.deleteWithCsrf(
                 `${API_ENDPOINT}/${existing.id}`
             );
 
