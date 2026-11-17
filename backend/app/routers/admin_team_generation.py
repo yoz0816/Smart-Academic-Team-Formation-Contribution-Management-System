@@ -22,6 +22,7 @@ from app.schemas.team_generation import (
 from app.services.team_generation_service import (
     generate_and_save_team_proposal,
 )
+from app.services.notification_service import create_notification
 
 
 router = APIRouter(
@@ -297,6 +298,27 @@ def publish_generation_batch(
 
         for team in teams:
             team.status = "published"
+
+        notified_student_ids = set()
+
+        for team in teams:
+            for member in team.members:
+                student_id = member.user_id
+
+                if student_id in notified_student_ids:
+                    continue
+
+                notified_student_ids.add(student_id)
+
+                create_notification(
+                    db=db,
+                    recipient_id=student_id,
+                    actor_id=current_admin.id,
+                    category="team",
+                    title="Your academic team is published",
+                    message="Your team has been published. You can now view your team members.",
+                    action_url="/pages/student/my-team.html",
+                )
 
         db.commit()
 
