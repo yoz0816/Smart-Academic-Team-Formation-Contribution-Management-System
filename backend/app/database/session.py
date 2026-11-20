@@ -1,0 +1,38 @@
+from sqlalchemy import URL, create_engine
+from sqlalchemy.orm import sessionmaker
+
+from app.core.config import settings
+
+
+DATABASE_URL = URL.create(
+    drivername="mysql+pymysql",
+    username=settings.DATABASE_USER,
+    password=settings.DATABASE_PASSWORD,
+    host=settings.DATABASE_HOST,
+    port=settings.DATABASE_PORT,
+    database=settings.DATABASE_NAME,
+    query={"charset": "utf8mb4"},
+)
+
+
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,
+    echo=settings.DEBUG,
+)
+
+
+SessionLocal = sessionmaker(
+    bind=engine,
+    autocommit=False,
+    autoflush=False,
+)
+
+
+def get_db():
+    db = SessionLocal()
+
+    try:
+        yield db
+    finally:
+        db.close()
